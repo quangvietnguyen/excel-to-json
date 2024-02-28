@@ -16,16 +16,11 @@ function main(file) {
     })
     .finally(function () {
       var json = JSON.stringify(list);
-      fs.writeFile(
-        '/Users/vietqnguyen/desktop/test.json',
-        json,
-        'utf8',
-        function (err) {
-          if (err) throw err;
-          console.log('complete');
-        }
-      );
+      fs.writeFile('path/to/your/json/file.json', json, 'utf8', function (err) {
+        if (err) throw err;
+        console.log('complete');
+      });
     });
 }
 
-main('/Users/vietqnguyen/desktop/test.xlsx');
+main('path/to/your/excel/file.xlsx');
